@@ -24,7 +24,7 @@ export default function Navigation() {
         <div className="flex items-center h-16">
           {/* Logo/Home Link */}
           <div className="flex-shrink-0 w-24">
-            <Link href="/" className={`${unifraktur.className} text-2xl text-yellow-300`}>
+            <Link href="/" className={`${unifraktur.className} text-2xl ${isHomePage ? 'text-yellow-300' : 'text-black'}`}>
               C&B
             </Link>
           </div>
@@ -42,13 +42,13 @@ export default function Navigation() {
                       isHomePage 
                         ? 'text-yellow-300 hover:text-yellow-200' 
                         : isActive
-                          ? 'text-yellow-300'
-                          : 'text-yellow-300 hover:text-yellow-200'
+                          ? 'text-black'
+                          : 'text-black hover:text-gray-600'
                     }`}
                   >
                     {item.name}
                     {isActive && (
-                      <div className={`absolute left-0 right-0 h-0.5 bottom-0 bg-yellow-300`} />
+                      <div className={`absolute left-0 right-0 h-0.5 bottom-0 ${isHomePage ? 'bg-yellow-300' : 'bg-black'}`} />
                     )}
                   </Link>
                 );
@@ -66,7 +66,7 @@ export default function Navigation() {
               className="inline-flex items-center justify-center p-2 rounded-md"
             >
               <span className="sr-only">Open main menu</span>
-              <div className="text-yellow-300">
+              <div className={isHomePage ? 'text-yellow-300' : 'text-black'}>
                 {isOpen ? (
                   <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                 ) : (
