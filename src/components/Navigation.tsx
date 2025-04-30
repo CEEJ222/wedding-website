@@ -25,7 +25,7 @@ export default function Navigation() {
           {/* Logo/Home Link */}
           <div className="flex-shrink-0 w-24">
             <Link href="/" className={`${unifraktur.className} text-2xl ${isHomePage ? 'text-yellow-300' : 'text-black'}`}>
-              C&B
+              CB
             </Link>
           </div>
 

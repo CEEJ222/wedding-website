@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${unifraktur.variable} ${inter.className}`}>
+      <body className={`${unifraktur.variable} ${inter.className} bg-black`}>
         <Navigation />
         <main className="min-h-screen">
           {children}
