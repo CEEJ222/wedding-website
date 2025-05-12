@@ -79,10 +79,10 @@ export default function Home() {
             className="object-cover"
             priority
             style={{ 
-              objectPosition: 'center 75%' // Adjust this value to show more/less of the bottom
+              objectPosition: 'center 75%'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60" /> {/* Gradient overlay for smoother transition */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60" />
         </motion.div>
         
         <motion.div 
@@ -99,11 +99,9 @@ export default function Home() {
             <p className="text-lg md:text-xl mb-8 text-yellow-300">
               ERA STUDIO • Downtown Los Angeles
             </p>
-            
-            {/* New Button */}
             <Link href="/details">
               <motion.button
-                className="px-6 py-2 mt-4 text-sm text-yellow-300 border border-yellow-300 rounded-md 
+                className="px-6 py-2 mt-4 text-sm text-yellow-300 border border-yellow-300 rounded-md \
                           hover:bg-yellow-300 hover:text-black transition-colors duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -114,102 +112,6 @@ export default function Home() {
           </div>
         </motion.div>
       </div>
-
-      {/* Welcome Section with New Background */}
-      <motion.section 
-        style={{ y: starryY }}
-        className="relative min-h-screen -mt-24 w-screen overflow-hidden"
-      >
-        {/* Static Background */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/bottom-page (1).jpg"
-            alt="Welcome Section Background"
-            fill
-            className="object-cover w-full"
-            sizes="100vw"
-            quality={100}
-            priority
-          />
-        </div>
-
-        {/* Content container */}
-        <div className="relative z-10 container mx-auto px-4 py-24">
-          {/* Text Content */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-light mb-6 text-yellow-300">
-              We're Getting Married!
-            </h2>
-            <div className="leading-relaxed space-y-4 text-yellow-300">
-              <p>
-                Welcome to our wedding website! We're getting married and couldn't be more excited 
-                to celebrate with the people who mean the most to us.
-              </p>
-              <p>
-                Thanks for being a part of our lives. We can't wait to see you soon!
-              </p>
-            </div>
-          </div>
-
-          {/* Curved Carousel */}
-          <div className="relative w-full overflow-hidden py-16">
-            <div className="relative max-w-[90vw] mx-auto h-[400px] perspective-1000">
-              <AnimatePresence initial={false} custom={direction}>
-                <motion.div
-                  key={page}
-                  custom={direction}
-                  variants={variants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{
-                    x: { type: "spring", stiffness: 300, damping: 30 },
-                    opacity: { duration: 0.2 },
-                    rotateY: { duration: 0.5 }
-                  }}
-                  className="absolute w-full h-full"
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={1}
-                  onDragEnd={(e, { offset, velocity }) => {
-                    const swipe = swipePower(offset.x, velocity.x);
-                    if (swipe < -swipeConfidenceThreshold) {
-                      paginate(1);
-                    } else if (swipe > swipeConfidenceThreshold) {
-                      paginate(-1);
-                    }
-                  }}
-                >
-                  <Image
-                    src={images[imageIndex]}
-                    alt={`Carousel Image ${imageIndex + 1}`}
-                    fill
-                    className="object-cover rounded-2xl"
-                  />
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Navigation Arrows */}
-              <motion.button
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/20 text-yellow-300"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => paginate(-1)}
-              >
-                ←
-              </motion.button>
-              <motion.button
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/20 text-yellow-300"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => paginate(1)}
-              >
-                →
-              </motion.button>
-            </div>
-          </div>
-        </div>
-      </motion.section>
 
       {/* Footer */}
       <footer className="relative py-8 bg-black">
