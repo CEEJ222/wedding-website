@@ -3,10 +3,12 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 interface FAQ {
   question: string;
   answer: string;
+  link?: string;
 }
 
 const faqs: FAQ[] = [
@@ -32,7 +34,7 @@ const faqs: FAQ[] = [
   },
   {
     question: "What's the dress code?",
-    answer: "We've put together a VERY curated guide for you—check out our Dress Code Page for all the details and inspiration."
+    answer: "We've put together a VERY curated guide for you—check out our"
   },
   {
     question: "What if I have dietary restrictions?",
@@ -77,7 +79,17 @@ export default function FAQs() {
                     className="overflow-hidden"
                   >
                     <div className="p-6 pt-0 text-gray-700 text-base leading-relaxed">
-                      {faq.answer}
+                      {faq.question === "What's the dress code?" ? (
+                        <>
+                          {faq.answer}{" "}
+                          <Link href="/dress-code" className="text-blue-600 hover:text-blue-800 underline">
+                            Dress Code Page
+                          </Link>{" "}
+                          for all the details and inspiration.
+                        </>
+                      ) : (
+                        faq.answer
+                      )}
                     </div>
                   </motion.div>
                 )}

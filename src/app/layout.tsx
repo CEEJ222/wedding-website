@@ -15,6 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicons/favicon.ico" />
+      </head>
       <body className={`${unifraktur.variable} ${inter.className} bg-black`}>
         <Navigation />
         <main className="min-h-screen">
