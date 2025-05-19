@@ -9,7 +9,7 @@ export default function DressCode() {
         <p className="text-center mb-8 text-black">For visual learners, Betsy has created this moodboard for inspo:</p>
         <div className="flex justify-center">
           <Image
-            src="/videos/MSW.gif"
+            src="/images/dresscode2withwriting.mp41-ezgif.com-optimize.gif"
             alt="Dress code inspiration"
             width={400}
             height={300}

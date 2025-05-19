@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import { inter, unifraktur } from "@/lib/fonts";
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "C.J. & Betsy's Wedding",

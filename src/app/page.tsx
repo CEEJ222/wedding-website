@@ -112,13 +112,6 @@ export default function Home() {
           </div>
         </motion.div>
       </div>
-
-      {/* Footer */}
-      <footer className="relative py-8 bg-black">
-        <div className="container mx-auto px-4">
-          <p className="text-yellow-300 text-center font-bold">© 2024 C.J. & Betsy</p>
-        </div>
-      </footer>
     </div>
   );
 }

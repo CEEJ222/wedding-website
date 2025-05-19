@@ -86,7 +86,31 @@ export default function Details() {
           </div>
         </div>
       </div>
-
+      <div className="flex flex-col items-center my-12">
+  <div className="flex flex-wrap justify-center gap-6">
+    <Image
+      src="/images/Betsy-CJ/LP0_7239_Retouched_LindseyByrnes.jpg"
+      alt="Betsy and CJ 1"
+      width={350}
+      height={525}
+      className="rounded-lg shadow-md"
+    />
+    <Image
+      src="/images/Betsy-CJ/LP0_7102 copy-retouched_LindseyByrnes.jpg"
+      alt="Betsy and CJ 2"
+      width={350}
+      height={525}
+      className="rounded-lg shadow-md"
+    />
+    <Image
+      src="/images/Betsy-CJ/LP0_7260 copy.jpg"
+      alt="Betsy and CJ 3"
+      width={350}
+      height={525}
+      className="rounded-lg shadow-md"
+    />
+  </div>
+</div>
       {/* FAQ CTA Section */}
       <div className="max-w-4xl mx-auto px-4 py-8 text-center">
         <p className="text-gray-700 mb-6">
