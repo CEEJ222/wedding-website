@@ -129,7 +129,7 @@ export default function RSVP() {
             {/* Note Field */}
             <div>
               <label htmlFor="note" className="block text-sm font-medium text-gray-900 mb-1">
-                Note or Question (optional)
+                Note or Dietary Restrictions (optional)
               </label>
               <textarea
                 id="note"
