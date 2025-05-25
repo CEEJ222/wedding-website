@@ -8,8 +8,9 @@ export default function DressCode() {
         {/* Section 1: Dress Code Intro */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-light mb-4 text-black">
-            Dress Code: <strong>Cocktail Attire</strong>
+            Dress Code:
           </h1>
+          <p className="text-black text-4xl font-semibold pb-12">Cocktail Attire</p>
           <p className="mb-4 pb-4 text-black">
             Dress to impress, baby. Think of what you'd wear to a dinner and dancing night then take it up two more notches.
           </p>
@@ -18,8 +19,7 @@ export default function DressCode() {
           <div className="flex-1">
             <h2 className="text-2xl font-semibold mb-4 text-gray-900">Fun & Colorful</h2>
             <p className="text-gray-700">
-              Filler copy: Don’t be afraid to show your personality—bold colors, playful prints, and unique accessories are welcome!
-            </p>
+            Think body double on the practical magic set.. feathers, sparkles, and crotchet. Betsy’s grandma Katie has the vibe down (even in her day to day life)- so if you see her you can congratulate her on best outfit.            </p>
           </div>
           <div className="flex-1 flex justify-center">
             <Image
@@ -36,8 +36,7 @@ export default function DressCode() {
           <div className="flex-1">
             <h2 className="text-2xl font-semibold mb-4 text-gray-900">Little Black Dress</h2>
             <p className="text-gray-700">
-              Filler copy: A classic cocktail staple—timeless, chic, and always in style. Perfect for a night of celebration.
-            </p>
+            Audrey forever. Betsy’s other grandma BB (whom she is named after) always said that Audrey Hepburn and Grace Kelly never got it wrong. You won’t either if you follow that advice.             </p>
           </div>
           <div className="flex-1 flex justify-center">
             <Image
