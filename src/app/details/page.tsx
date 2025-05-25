@@ -26,20 +26,20 @@ export default function Details() {
         <div className="space-y-40">
           {/* Section 1: Venue Info (Text left, Image right) */}
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1">
+            <div className="flex-1 md:text-left text-center">
               <h2 className="text-3xl font-semibold mb-4 text-gray-900">Join Us at Era Studio</h2>
               <p className="text-gray-700 mb-6">
                 Located just south of the Arts District in Downtown Los Angeles.
               </p>
               <div>
-                <h3 className="font-medium mb-2 text-gray-900">Address</h3>
+                <h3 className="font-bold mb-2 text-gray-900">Address</h3>
                 <p className="text-gray-700">
                   1919 Bay St<br />
                   Los Angeles, CA 90021
                 </p>
               </div>
               <div className="mt-6">
-                <h3 className="font-medium mb-2 text-gray-900">Timing</h3>
+                <h3 className="font-bold mb-2 text-gray-900">Timing</h3>
                 <p className="text-gray-700">
                   The celebration will take place on November 1st from 6:00 PM to 11:00 PM.
                 </p>
@@ -57,11 +57,11 @@ export default function Details() {
           </div>
           {/* Section 2: Parking (Image left, Text right) */}
           <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-            <div className="flex-1">
+            <div className="flex-1 md:text-left text-center">
               <h2 className="text-3xl font-semibold mb-4 text-gray-900">Parking</h2>
               <p className="text-gray-700 mb-4">
                 If you're driving to the wedding, there's plenty of street parking on Bay street and other streets around the venue. 
-                You might notice some signs along Bay street in front of the warehouses that say "Parking only for ____ customers"—don't worry, 
+                You might notice some signs along Bay street in front of the warehouses that say "Parking only for [business name] customers"—don't worry, 
                 those aren't official! The venue owner informed us we can park in those spots. 
               </p>
               <p className="text-gray-700">
@@ -84,7 +84,7 @@ export default function Details() {
           </div>
           {/* Section 3: Dinner (Text left, Image right) */}
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1">
+            <div className="flex-1 md:text-left text-center">
               <h2 className="text-3xl font-semibold mb-4 text-gray-900">Dinner by Kogi</h2>
               <p className="text-gray-700 mb-6">
                 We're excited to have the famous Kogi food truck serving their 
@@ -92,8 +92,11 @@ export default function Details() {
               </p>
               <div>
                 <h3 className="font-medium mb-2 text-gray-900">Menu Highlights</h3>
-                <ul className="text-gray-700 list-disc list-inside">
-                  <li>Short Rib, Spicy Pork, Chicken, and Tofu Kogi Tacos served on corn tortillas</li>
+                <ul className="text-gray-700 list-inside">
+                  <li>Short Rib</li>
+                  <li>Spicy Pork, Chicken</li>
+                  <li>Tofu Kogi Tacos</li>
+                    <p className="text-gray-700 font-style: italic mt-4">All tacos will be served on corn tortillas</p>
                 </ul>
               </div>
             </div>
@@ -109,12 +112,12 @@ export default function Details() {
           </div>
           {/* Section 4: Places to Stay (Text left, Image right) */}
           <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-            <div className="flex-1">
+            <div className="flex-1 md:text-left text-center">
               <h2 className="text-3xl font-semibold mb-4 text-gray-900">Places to Stay</h2>
               <p className="text-gray-700 mb-4">
                 We recommend staying in the area of <span className="font-medium text-gray-900">Old Town Pasadena</span> for the best experience—it's lively, walkable, and full of great restaurants, shops, and hotels.
               </p>
-              <ul className="list-disc list-inside text-gray-700 mb-4">
+              <ul className="list-inside text-gray-700 mb-4">
               <li>
                   <a
                     href="https://www.marriott.com/en-us/hotels/laxot-courtyard-los-angeles-pasadena-old-town/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0"

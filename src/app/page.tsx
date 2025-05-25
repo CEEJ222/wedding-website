@@ -110,16 +110,6 @@ export default function Home() {
                 DETAILS
               </motion.button>
             </Link>
-            <Link href="/details">
-              <motion.button
-                className="px-6 py-2 mt-4 text-sm text-yellow-300 border border-yellow-300 rounded-md \
-                          hover:bg-yellow-300 hover:text-black transition-colors duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                RSVP
-              </motion.button>
-            </Link>
             </div>
           </div>
         </motion.div>

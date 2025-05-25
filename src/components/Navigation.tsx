@@ -24,7 +24,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={`fixed w-full z-50 ${isHomePage ? 'bg-transparent' : 'bg-white/80 backdrop-blur-sm'}`}>
+    <nav className={`fixed w-full z-50 ${isHomePage ? 'bg-transparent' : 'bg-gray-50/80 backdrop-blur-sm'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16">
           {/* Logo/Home Link */}
@@ -102,7 +102,7 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-black/80 backdrop-blur-sm">
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-white/50">
           {navItems.map((item) => {
             const isActive = pathname === item.path;
             if (item.external) {
@@ -112,7 +112,7 @@ export default function Navigation() {
                   href={item.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-3 py-2 text-yellow-300"
+                  className="block px-3 py-2 text-gray-900"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -123,8 +123,8 @@ export default function Navigation() {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`block px-3 py-2 text-yellow-300 ${
-                  isActive ? 'bg-gray-800' : ''
+                className={`block px-3 py-2 text-gray-900 ${
+                  isActive ? 'bg-gray-200' : ''
                 }`}
                 onClick={() => setIsOpen(false)}
               >
