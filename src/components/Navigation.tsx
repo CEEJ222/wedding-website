@@ -10,6 +10,11 @@ const navItems = [
   { name: 'DETAILS', path: '/details' },
   { name: 'DRESS CODE', path: '/dress-code' },
   { name: 'FAQS', path: '/faqs' },
+  {
+    name: 'REGISTRY',
+    path: 'https://www.zola.com/registry/betsyandcj',
+    external: true,
+  },
   { name: 'RSVP', path: '/rsvp' },
 ];
 
@@ -34,6 +39,23 @@ export default function Navigation() {
             <div className="flex items-center space-x-8">
               {navItems.map((item) => {
                 const isActive = pathname === item.path;
+                if (item.external) {
+                  return (
+                    <a
+                      key={item.path}
+                      href={item.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`relative px-3 py-2 text-sm font-medium transition-colors uppercase ${
+                        isHomePage 
+                          ? 'text-yellow-300 hover:text-yellow-200' 
+                          : 'text-black hover:text-gray-600'
+                      }`}
+                    >
+                      {item.name}
+                    </a>
+                  );
+                }
                 return (
                   <Link
                     key={item.path}
@@ -83,6 +105,20 @@ export default function Navigation() {
         <div className="px-2 pt-2 pb-3 space-y-1 bg-black/80 backdrop-blur-sm">
           {navItems.map((item) => {
             const isActive = pathname === item.path;
+            if (item.external) {
+              return (
+                <a
+                  key={item.path}
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-3 py-2 text-yellow-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </a>
+              );
+            }
             return (
               <Link
                 key={item.path}

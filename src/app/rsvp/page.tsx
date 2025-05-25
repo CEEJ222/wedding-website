@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function RSVP() {
   const [hasPlusOne, setHasPlusOne] = useState(false);
@@ -68,15 +69,6 @@ export default function RSVP() {
   return (
     <div className="min-h-screen pt-16 bg-white">
       <div className="max-w-md mx-auto px-4 py-16">
-      <div className="flex justify-start mb-2">
-            <Image
-              src="/icons/subpage-icons/music-party.svg"
-              alt="Ring Icon"
-              width={64}
-              height={64}
-              className="opacity-80"
-            />
-          </div>
         <h1 className="text-4xl font-light text-center mb-8 text-gray-900">RSVP</h1>
 
         {success && (

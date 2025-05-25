@@ -15,8 +15,8 @@ export default function Details() {
               className="opacity-80"
             />
           </div>
-          <h1 className="text-4xl font-light text-center mb-2 text-gray-900">Wedding Details</h1>
-          <div className="text-center mb-4 pb-16">
+          <h1 className="text-4xl font-light text-center mb-2 pb-8 text-gray-900">Wedding Details</h1>
+          <div className="text-center mb-4 pb-24">
             <p className="text-gray-900">
               On the day of the wedding, we are having a very small ceremony in nature with just a few friends. We preferred to keep it small and intimate. We're inviting you to join us after to have the best party and celebrate us embarking on this next chapter of our lives together.
             </p>
