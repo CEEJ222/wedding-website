@@ -98,6 +98,16 @@ export default function Details() {
               We recommend staying in the area of <span className="font-medium text-gray-900">Old Town Pasadena</span> for the best experience—it's lively, walkable, and full of great restaurants, shops, and hotels.
             </p>
             <ul className="list-disc list-inside text-gray-700 mb-4">
+            <li>
+                <a
+                  href="https://www.marriott.com/en-us/hotels/laxot-courtyard-los-angeles-pasadena-old-town/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  Courtyard by Marriott Pasadena Old Town
+                </a>
+              </li>
               <li>
                 <a
                   href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=PASPHHF&arrivalDate=2025-10-31&departureDate=2025-11-02&room1NumAdults=2&inputModule=HOTEL_SEARCH&viewPackagesAndPromotionsRate=true&WT.mc_id=zLADA0US1HF2OLX3GGL4ADVSP5LF6_PASPHHF7_281530522_&adType=PD&gclid=CjwKCAjw3MXBBhAzEiwA0vLXQRh9k5v6WTNYVWAzVDq9TeKYqbQzBT9Xl-SeP1A4Ta41OFhM6P_HuRoC89wQAvD_BwE&dsclid=70244261337247744&dclid=CN-4seKYvY0DFVvi_QUdsiAycw&hmGUID=5cf0be6d-3526-4f2b-8b62-a2580d077ef4"
