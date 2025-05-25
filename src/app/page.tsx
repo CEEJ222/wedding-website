@@ -99,6 +99,7 @@ export default function Home() {
             <p className="text-lg md:text-xl mb-8 text-yellow-300">
               ERA STUDIO • Downtown Los Angeles
             </p>
+            <div className="flex flex-row justify-center gap-2">
             <Link href="/details">
               <motion.button
                 className="px-6 py-2 mt-4 text-sm text-yellow-300 border border-yellow-300 rounded-md \
@@ -106,9 +107,20 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                View Wedding Details
+                DETAILS
               </motion.button>
             </Link>
+            <Link href="/details">
+              <motion.button
+                className="px-6 py-2 mt-4 text-sm text-yellow-300 border border-yellow-300 rounded-md \
+                          hover:bg-yellow-300 hover:text-black transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                RSVP
+              </motion.button>
+            </Link>
+            </div>
           </div>
         </motion.div>
       </div>

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function DressCode() {
   return (
-    <div className="min-h-screen pt-16 bg-gray-100">
+    <div className="min-h-screen pt-16 bg-white">
       <div className="max-w-5xl mx-auto px-4 py-16 space-y-20">
         
         {/* Section 1: Dress Code Intro */}
