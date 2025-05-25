@@ -1,12 +1,24 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export default function RSVP() {
   const [hasPlusOne, setHasPlusOne] = useState(false);
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  // Carousel state
+  const images = [
+    '/images/Betsy-CJ/LP0_7239_Retouched_LindseyByrnes.jpg',
+    '/images/Betsy-CJ/LP0_7102 copy-retouched_LindseyByrnes.jpg',
+    '/images/Betsy-CJ/LP0_7260 copy.jpg',
+  ];
+  const [carouselIndex, setCarouselIndex] = useState(0);
+
+  const nextImage = () => setCarouselIndex((i) => (i + 1) % images.length);
+  const prevImage = () => setCarouselIndex((i) => (i - 1 + images.length) % images.length);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     if (loading) return;
@@ -160,6 +172,28 @@ export default function RSVP() {
             </button>
           </div>
         </motion.form>
+      </div>
+
+      {/* Image Gallery Section */}
+      <div className="max-w-3xl mx-auto px-4 pb-16">
+        <h2 className="text-2xl font-semibold text-center mb-4 text-black">Can't wait to see you there!</h2>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          {images.map((src, idx) => (
+            <div key={idx} className="flex-1 flex justify-center">
+              <Image
+                src={src}
+                alt={`Betsy & CJ ${idx + 1}`}
+                width={300}
+                height={450}
+                className="object-cover rounded-lg"
+                priority={idx === 0}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 text-center text-gray-500 text-sm">
+          Photos by Lindsey Byrnes
+        </div>
       </div>
     </div>
   );
