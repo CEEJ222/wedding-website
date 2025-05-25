@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-
+import Image from 'next/image';
 interface FAQ {
   question: string;
   answer: string;
@@ -52,7 +52,16 @@ export default function FAQs() {
   return (
     <div className="min-h-screen pt-16 bg-white">
       <div className="max-w-3xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-light text-center mb-12 text-black">Frequently Asked Questions</h1>
+      <div className="flex justify-start mb-2">
+            <Image
+              src="/icons/subpage-icons/bride-and-groom.svg"
+              alt="Ring Icon"
+              width={64}
+              height={64}
+              className="opacity-80"
+            />
+          </div>
+        <h1 className="text-4xl font-light text-center mb-12 text-gray-900">Frequently Asked Questions</h1>
         
         <div className="space-y-4">
           {faqs.map((faq, index) => (
