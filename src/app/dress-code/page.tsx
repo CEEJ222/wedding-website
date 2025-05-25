@@ -55,8 +55,8 @@ export default function DressCode() {
           <div className="flex-1">
             <h2 className="text-2xl font-semibold mb-4 text-gray-900">Western-Inspired Menswear</h2>
             <p className="text-gray-700">
-              Think Canadian tuxedos, Beyonce's Rennaisance tour, and Jeff Golblum. We heavily encourage western wear. Bolo ties are central to the McCauley family style repertoire thanks to CJ's maternal grandfather and the family's ties to New Mexico. And if you see a guy wearing shit-kickers and jeans, that's CJ's uncle Peter.
-            </p>
+              Think Canadian tuxedos, Beyonce's Rennaisance tour, and Jeff Golblum. We heavily encourage western wear.</p> 
+              <p className="text-gray-700 pt-4">Bolo ties are central to the McCauley family style repertoire thanks to CJ's maternal grandfather and the family's ties to New Mexico. And if you see a guy wearing shit-kickers and jeans, say hello to CJ's uncle Peter.</p>
           </div>
           <div className="flex-1 flex justify-center">
             <Image
