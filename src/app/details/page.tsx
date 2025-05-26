@@ -7,10 +7,10 @@ export default function Details() {
       className="min-h-screen pt-16 bg-gray-50 relative"
       style={{
         background: `
-          radial-gradient(circle 200px at 75% 25%, rgba(255, 192, 203, 0.6) 0%, rgba(255, 255, 0, 0.4) 40%, transparent 70%),
-          radial-gradient(circle 180px at 25% 45%, rgba(255, 255, 0, 0.5) 0%, rgba(255, 192, 203, 0.3) 40%, transparent 70%),
-          radial-gradient(circle 220px at 75% 65%, rgba(255, 192, 203, 0.55) 0%, rgba(255, 255, 0, 0.35) 40%, transparent 70%),
-          radial-gradient(circle 190px at 25% 85%, rgba(255, 255, 0, 0.4) 0%, rgba(255, 192, 203, 0.3) 40%, transparent 70%),
+          radial-gradient(circle 200px at 75% 25%, rgba(255, 192, 203, 0.6) 0%, rgba(205, 167, 190, 0.4) 30%, rgba(255, 255, 0, 0.3) 60%, transparent 80%),
+          radial-gradient(circle 180px at 25% 45%, rgba(255, 255, 0, 0.5) 0%, rgba(205, 167, 190, 0.3) 30%, rgba(255, 192, 203, 0.2) 60%, transparent 80%),
+          radial-gradient(circle 220px at 75% 65%, rgba(205, 167, 190, 0.55) 0%, rgba(255, 192, 203, 0.4) 30%, rgba(255, 255, 0, 0.25) 60%, transparent 80%),
+          radial-gradient(circle 190px at 25% 85%, rgba(255, 255, 0, 0.4) 0%, rgba(255, 192, 203, 0.3) 30%, rgba(205, 167, 190, 0.2) 60%, transparent 80%),
           #F9FAFB
         `
       }}
@@ -30,7 +30,7 @@ export default function Details() {
           <h1 className={`${spectral.className} text-4xl font-light text-center mb-2 pb-8 text-gray-900`}>Wedding Details</h1>
           <div className="text-center mb-4 pb-24">
             <p className={`${instrumentSans.className} text-gray-900`}>
-              On the day of the wedding, we are having a very small ceremony in nature with just a few friends. We preferred to keep it small and intimate. We're inviting you to join us after to have the best party and celebrate us embarking on this next chapter of our lives together.
+              On the day of the wedding, we are having a very small ceremony in nature with just a few friends. We prefer to keep it small and intimate. We're inviting you to join us after to have the best party and celebrate us embarking on this next chapter of our lives together.
             </p>
           </div>
         </div>
@@ -45,10 +45,18 @@ export default function Details() {
               </p>
               <div>
                 <h3 className={`${spectral.className} font-bold mb-2 text-gray-900`}>Address</h3>
-                <p className={`${instrumentSans.className} text-gray-700`}>
+                <a
+                    href="https://g.co/kgs/dXQ1M8r"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 font-medium hover:underline"
+                  >
+                <p className={`${instrumentSans.className}`}>
                   1919 Bay St<br />
                   Los Angeles, CA 90021
-                </p>
+                </p>                    
+                </a>
+
               </div>
               <div className="mt-6">
                 <h3 className={`${spectral.className} font-bold mb-2 text-gray-900`}>Timing</h3>
@@ -78,10 +86,14 @@ export default function Details() {
               </p>
               <p className="text-gray-700">
                 If street parking is full, there's an additional lot available just two blocks away at:<br />
-                <span className="font-medium">826 Mateo St, Los Angeles, CA 90021</span>
-              </p>
-              <p className="text-gray-700 mt-4">
-                If that all sounded like WAY too much... Uber! Life is too short! Do not stress on parking!
+                <a
+                    href="https://g.co/kgs/waAB17g"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline"
+                  >
+                    <span className="font-medium ">826 Mateo St, Los Angeles, CA 90021</span>
+                    </a>
               </p>
             </div>
             <div className="flex-1 flex justify-center">
@@ -103,11 +115,12 @@ export default function Details() {
                 delicious Korean-Mexican fusion tacos at our reception.
               </p>
               <div>
-                <h3 className={`${spectral.className} font-medium mb-2 text-gray-900`}>Menu Highlights</h3>
+                <h3 className={`${spectral.className} font-medium mb-2 text-gray-900`}>Kogi Tacos Menu</h3>
                 <ul className="text-gray-700 list-inside">
                   <li>Short Rib</li>
-                  <li>Spicy Pork, Chicken</li>
-                  <li>Tofu Kogi Tacos</li>
+                  <li>Spicy Pork</li>
+                  <li>Chicken</li>
+                  <li>Tofu</li>
                     <p className="text-gray-700 font-style: italic mt-4">All tacos will be served on corn tortillas</p>
                 </ul>
               </div>

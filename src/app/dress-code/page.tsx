@@ -7,10 +7,10 @@ export default function DressCode() {
       className="min-h-screen pt-16 bg-gray-50 relative"
       style={{
         background: `
-          radial-gradient(circle 180px at 75% 30%, rgba(255, 192, 203, 0.5) 0%, rgba(255, 255, 0, 0.3) 40%, transparent 70%),
-          radial-gradient(circle 200px at 25% 50%, rgba(255, 255, 0, 0.6) 0%, rgba(255, 192, 203, 0.4) 40%, transparent 70%),
-          radial-gradient(circle 190px at 75% 70%, rgba(255, 192, 203, 0.65) 0%, rgba(255, 255, 0, 0.4) 40%, transparent 70%),
-          radial-gradient(circle 170px at 25% 90%, rgba(255, 255, 0, 0.4) 0%, rgba(255, 192, 203, 0.3) 40%, transparent 70%),
+          radial-gradient(circle 180px at 75% 30%, rgba(255, 192, 203, 0.5) 0%, rgba(205, 167, 190, 0.35) 30%, rgba(255, 255, 0, 0.2) 60%, transparent 80%),
+          radial-gradient(circle 200px at 25% 50%, rgba(255, 255, 0, 0.6) 0%, rgba(205, 167, 190, 0.4) 30%, rgba(255, 192, 203, 0.3) 60%, transparent 80%),
+          radial-gradient(circle 190px at 75% 70%, rgba(205, 167, 190, 0.65) 0%, rgba(255, 192, 203, 0.4) 30%, rgba(255, 255, 0, 0.25) 60%, transparent 80%),
+          radial-gradient(circle 170px at 25% 90%, rgba(255, 255, 0, 0.4) 0%, rgba(255, 192, 203, 0.3) 30%, rgba(205, 167, 190, 0.2) 60%, transparent 80%),
           #F9FAFB
         `
       }}
