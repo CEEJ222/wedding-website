@@ -27,7 +27,10 @@ export default function RSVP() {
     e.preventDefault();
     setLoading(true);
     setSuccess(false);
-    const formData = new FormData(e.currentTarget);
+    
+    // Store form reference before async operations
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const data = {
       name: formData.get('name'),
       plusOneName: formData.get('plusOneName'),
@@ -42,26 +45,25 @@ export default function RSVP() {
           'Content-Type': 'application/json',
         },
       });
-      const text = await response.text();
-      console.log('RAW RESPONSE:', text);
-      let result;
-      try {
-        result = JSON.parse(text);
-      } catch (err) {
-        result = { result: response.ok ? 'success' : 'error' };
-      }
-      if (result.result === 'success') {
+      
+      const responseData = await response.json();
+      
+      if (response.ok && responseData.result === 'success') {
+        // Success! Show success message and clear form
         setSuccess(true);
-        e.currentTarget.reset();
+        form.reset();
         setHasPlusOne(false);
         setTimeout(() => setSuccess(false), 5000); // Hide after 5 seconds
       } else {
+        // Error response from server
         setSuccess(false);
-        alert('There was an error submitting your RSVP.');
+        alert('There was an error submitting your RSVP. Please try again.');
       }
     } catch (err) {
+      // Network or other error
+      console.error('Fetch error:', err);
       setSuccess(false);
-      alert('There was an error submitting your RSVP.');
+      alert('There was an error submitting your RSVP. Please check your connection and try again.');
     } finally {
       setLoading(false);
     }
@@ -89,7 +91,7 @@ export default function RSVP() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-6 rounded-md bg-green-100 border border-green-300 text-green-800 px-4 py-3 text-center font-medium shadow"
           >
-            Thank you! Your RSVP has been received.
+            💖 Thank you! Your RSVP has been received 🥳
           </motion.div>
         )}
 
