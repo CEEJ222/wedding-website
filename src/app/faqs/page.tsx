@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
+import { spectral } from '@/lib/fonts';
 interface FAQ {
   question: string;
   answer: string;
@@ -50,18 +51,20 @@ export default function FAQs() {
   };
 
   return (
-    <div className="min-h-screen pt-16 bg-white">
+    <div 
+      className="min-h-screen pt-16 relative"
+      style={{
+        background: `
+          radial-gradient(circle at 75% 25%, rgba(233, 188, 78, 0.4) 0%, transparent 50%),
+          radial-gradient(circle at 25% 45%, rgba(205, 167, 190, 0.3) 0%, transparent 50%),
+          radial-gradient(circle at 70% 65%, rgba(221, 134, 159, 0.35) 0%, transparent 50%),
+          radial-gradient(circle at 30% 85%, rgba(255, 124, 184, 0.25) 0%, transparent 50%),
+          #FFFFFF
+        `
+      }}
+    >
       <div className="max-w-3xl mx-auto px-4 py-16">
-      <div className="flex justify-start mb-2">
-            <Image
-              src="/icons/subpage-icons/bride-and-groom.svg"
-              alt="Ring Icon"
-              width={64}
-              height={64}
-              className="opacity-80"
-            />
-          </div>
-        <h1 className="text-4xl font-light text-center mb-12 text-gray-900">Frequently Asked Questions</h1>
+        <h1 className={`${spectral.className} text-4xl font-light text-center mb-12 text-gray-900`}>Frequently Asked Questions</h1>
         
         <div className="space-y-4">
           {faqs.map((faq, index) => (

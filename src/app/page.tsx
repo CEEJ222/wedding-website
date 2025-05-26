@@ -1,9 +1,8 @@
 'use client';
 
-import Image from "next/image";
-import { unifraktur, caveat } from "@/lib/fonts";
-import { motion, useScroll, useTransform, wrap, AnimatePresence } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { pinyon, caveat, spectral, instrumentSans } from "@/lib/fonts";
+import { motion, useScroll, useTransform, wrap } from "framer-motion";
+import { useRef, useState } from "react";
 import Link from 'next/link';
 
 // Add these helper functions at the top of the file
@@ -62,57 +61,36 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen bg-transparent">
+    <div
+      className="relative min-h-screen"
+      style={{
+        background: "linear-gradient(180deg, #E9BC4E 0%, #C5AC9B 20%, #CDA7BE 40%, #DD869F 60%, #F37970 80%, #FF7CB8 100%)"
+      }}
+    >
       {/* Hero Section */}
-      <div ref={containerRef} className="relative h-screen overflow-hidden">
-        <motion.div 
-          style={{ 
-            y: bannerY,
-            scale: 1.1 // Add slight scale to prevent edges from showing
-          }}
-          className="absolute inset-0"
-        >
-          <Image
-            src="/images/homepage-banner.jpg"
-            alt="Wedding Banner"
-            fill
-            className="object-cover"
-            priority
-            style={{ 
-              objectPosition: 'center 75%'
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60" />
-        </motion.div>
-        
-        <motion.div 
-          style={{ opacity: bannerOpacity }}
-          className="relative h-full flex flex-col items-center justify-center px-4"
-        >
-          <div className="text-center">
-            <h1 className={`${unifraktur.className} text-5xl md:text-7xl mb-4 text-yellow-300`}>
-              C.J. & Betsy
-            </h1>
-            <p className={`${caveat.className} text-2xl md:text-4xl mb-2 text-yellow-300`}>
-              11.1.25
-            </p>
-            <p className="text-lg md:text-xl mb-8 text-yellow-300">
-              ERA STUDIO • Downtown Los Angeles
-            </p>
-            <div className="flex flex-row justify-center gap-2">
+      <div ref={containerRef} className="relative h-screen flex flex-col items-center justify-center px-4">
+        <div className="text-center pt-20">
+          <h1 className={`${pinyon.className} text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] xl:text-[14rem] mb-4 pb-16 text-black leading-none`}>
+            C.J. Britz & Betsy Bowman
+          </h1>
+          <p className={`${caveat.className} text-2xl md:text-4xl mb-2 text-black`}>
+            11.1.25
+          </p>
+          <p className={`${spectral.className} text-lg md:text-xl mb-8 text-black`}>
+            ERA STUDIO • Downtown Los Angeles
+          </p>
+          <div className="flex flex-row justify-center gap-2">
             <Link href="/details">
               <motion.button
-                className="px-6 py-2 mt-4 text-sm text-yellow-300 border border-yellow-300 rounded-md \
-                          hover:bg-yellow-300 hover:text-black transition-colors duration-300"
+                className={`${spectral.className} px-6 py-2 mt-4 text-sm text-black border border-black rounded-md bg-yellow-300 hover:bg-yellow-200 hover:border-black hover:text-black transition-colors duration-300`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 DETAILS
               </motion.button>
             </Link>
-            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

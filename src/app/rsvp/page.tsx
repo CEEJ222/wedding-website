@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { spectral } from '@/lib/fonts';
 
 export default function RSVP() {
   const [hasPlusOne, setHasPlusOne] = useState(false);
@@ -67,9 +68,20 @@ export default function RSVP() {
   };
 
   return (
-    <div className="min-h-screen pt-16 bg-white">
+    <div 
+      className="min-h-screen pt-16 relative"
+      style={{
+        background: `
+          radial-gradient(circle at 75% 25%, rgba(233, 188, 78, 0.4) 0%, transparent 50%),
+          radial-gradient(circle at 25% 45%, rgba(205, 167, 190, 0.3) 0%, transparent 50%),
+          radial-gradient(circle at 70% 65%, rgba(221, 134, 159, 0.35) 0%, transparent 50%),
+          radial-gradient(circle at 30% 85%, rgba(255, 124, 184, 0.25) 0%, transparent 50%),
+          #FFFFFF
+        `
+      }}
+    >
       <div className="max-w-md mx-auto px-4 py-16">
-        <h1 className="text-4xl font-light text-center mb-8 text-gray-900">RSVP</h1>
+        <h1 className={`${spectral.className} text-4xl font-light text-center mb-8 text-gray-900`}>RSVP</h1>
 
         {success && (
           <motion.div
@@ -177,7 +189,7 @@ export default function RSVP() {
 
       {/* Image Gallery Section */}
       <div className="max-w-3xl mx-auto px-4 pb-16">
-        <h2 className="text-2xl font-semibold text-center mb-4 text-black">Can't wait to see you there!</h2>
+        <h2 className={`${spectral.className} text-2xl font-semibold text-center mb-4 text-black`}>Can't wait to see you there!</h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           {images.map((src, idx) => (
             <div key={idx} className="flex-1 flex justify-center">

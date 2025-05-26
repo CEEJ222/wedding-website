@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { unifraktur } from '@/lib/fonts';
+import { instrumentSans, spectral } from '@/lib/fonts';
+import Image from 'next/image';
 
 const navItems = [
   { name: 'DETAILS', path: '/details' },
@@ -24,13 +25,19 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={`fixed w-full z-50 ${isHomePage ? 'bg-transparent' : 'bg-gray-50/80 backdrop-blur-sm'}`}>
+    <nav className={`fixed w-full z-50 ${isHomePage ? 'bg-transparent' : 'bg-pink-200 backdrop-blur-3xl'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16">
           {/* Logo/Home Link */}
           <div className="flex-shrink-0 w-24">
-            <Link href="/" className={`${unifraktur.className} text-2xl ${isHomePage ? 'text-yellow-300' : 'text-black'}`}>
-              CB
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/icons/marriage-icon.svg"
+                alt="C.J. & Betsy Wedding Logo"
+                width={40}
+                height={40}
+                className="hover:opacity-80 transition-opacity"
+              />
             </Link>
           </div>
 
@@ -46,9 +53,9 @@ export default function Navigation() {
                       href={item.path}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`relative px-3 py-2 text-sm font-medium transition-colors uppercase ${
+                      className={`${instrumentSans.className} relative px-3 py-2 text-sm font-medium transition-colors uppercase ${
                         isHomePage 
-                          ? 'text-yellow-300 hover:text-yellow-200' 
+                          ? 'text-black hover:text-gray-600' 
                           : 'text-black hover:text-gray-600'
                       }`}
                     >
@@ -60,9 +67,9 @@ export default function Navigation() {
                   <Link
                     key={item.path}
                     href={item.path}
-                    className={`relative px-3 py-2 text-sm font-medium transition-colors uppercase ${
+                    className={`${instrumentSans.className} relative px-3 py-2 text-sm font-medium transition-colors uppercase ${
                       isHomePage 
-                        ? 'text-yellow-300 hover:text-yellow-200' 
+                        ? 'text-black hover:text-gray' 
                         : isActive
                           ? 'text-black'
                           : 'text-black hover:text-gray-600'
@@ -70,7 +77,7 @@ export default function Navigation() {
                   >
                     {item.name}
                     {isActive && (
-                      <div className={`absolute left-0 right-0 h-0.5 bottom-0 ${isHomePage ? 'bg-yellow-300' : 'bg-black'}`} />
+                      <div className={`absolute left-0 right-0 h-0.5 bottom-0 ${isHomePage ? 'bg-black' : 'bg-black'}`} />
                     )}
                   </Link>
                 );
@@ -88,7 +95,7 @@ export default function Navigation() {
               className="inline-flex items-center justify-center p-2 rounded-md"
             >
               <span className="sr-only">Open main menu</span>
-              <div className={isHomePage ? 'text-yellow-300' : 'text-black'}>
+              <div className={isHomePage ? 'text-black' : 'text-black'}>
                 {isOpen ? (
                   <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                 ) : (
@@ -102,7 +109,7 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-white/50">
+        <div className="px-4 pt-4 pb-6 space-y-3 bg-white/95 backdrop-blur-md shadow-lg border-t border-gray-200">
           {navItems.map((item) => {
             const isActive = pathname === item.path;
             if (item.external) {
@@ -112,7 +119,7 @@ export default function Navigation() {
                   href={item.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-3 py-2 text-gray-900"
+                  className={`${spectral.className} block px-4 py-3 text-lg font-medium text-gray-900 hover:bg-gray-100 rounded-md transition-colors uppercase tracking-wide`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -123,8 +130,10 @@ export default function Navigation() {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`block px-3 py-2 text-gray-900 ${
-                  isActive ? 'bg-gray-200' : ''
+                className={`${spectral.className} block px-4 py-3 text-lg font-medium rounded-md transition-colors uppercase tracking-wide ${
+                  isActive 
+                    ? 'bg-black text-white' 
+                    : 'text-gray-900 hover:bg-gray-100'
                 }`}
                 onClick={() => setIsOpen(false)}
               >

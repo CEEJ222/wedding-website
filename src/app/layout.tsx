@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
-import { inter, unifraktur } from "@/lib/fonts";
+import { inter, pinyon, spectral, instrumentSans } from "@/lib/fonts";
 import Image from 'next/image';
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicons/favicon.ico" />
       </head>
-      <body className={`${unifraktur.variable} ${inter.className} bg-black`}>
+      <body className={`${pinyon.variable} ${spectral.variable} ${instrumentSans.variable} ${instrumentSans.className} bg-black`}>
         <Navigation />
         <main className="min-h-screen">
           {children}

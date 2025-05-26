@@ -8,7 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        unifraktur: ['var(--font-unifraktur)'],
+        pinyon: ['var(--font-pinyon)'],
+        spectral: ['var(--font-spectral)'],
+        'instrument-sans': ['var(--font-instrument-sans)'],
       },
     },
   },

@@ -1,8 +1,20 @@
 import Image from 'next/image';
+import { spectral, instrumentSans } from '@/lib/fonts';
 
 export default function Details() {
   return (
-    <div className="min-h-screen pt-16 bg-gray-50">
+    <div 
+      className="min-h-screen pt-16 bg-gray-50 relative"
+      style={{
+        background: `
+          radial-gradient(circle 200px at 75% 25%, rgba(255, 192, 203, 0.6) 0%, rgba(255, 255, 0, 0.4) 40%, transparent 70%),
+          radial-gradient(circle 180px at 25% 45%, rgba(255, 255, 0, 0.5) 0%, rgba(255, 192, 203, 0.3) 40%, transparent 70%),
+          radial-gradient(circle 220px at 75% 65%, rgba(255, 192, 203, 0.55) 0%, rgba(255, 255, 0, 0.35) 40%, transparent 70%),
+          radial-gradient(circle 190px at 25% 85%, rgba(255, 255, 0, 0.4) 0%, rgba(255, 192, 203, 0.3) 40%, transparent 70%),
+          #F9FAFB
+        `
+      }}
+    >
       <div className="max-w-5xl mx-auto px-4 py-16">
         {/* Header and Intro Area with Icons (tight spacing) */}
         <div className="mb-12">
@@ -15,9 +27,9 @@ export default function Details() {
               className="opacity-80"
             />
           </div>
-          <h1 className="text-4xl font-light text-center mb-2 pb-8 text-gray-900">Wedding Details</h1>
+          <h1 className={`${spectral.className} text-4xl font-light text-center mb-2 pb-8 text-gray-900`}>Wedding Details</h1>
           <div className="text-center mb-4 pb-24">
-            <p className="text-gray-900">
+            <p className={`${instrumentSans.className} text-gray-900`}>
               On the day of the wedding, we are having a very small ceremony in nature with just a few friends. We preferred to keep it small and intimate. We're inviting you to join us after to have the best party and celebrate us embarking on this next chapter of our lives together.
             </p>
           </div>
@@ -27,20 +39,20 @@ export default function Details() {
           {/* Section 1: Venue Info (Text left, Image right) */}
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 md:text-left text-center">
-              <h2 className="text-3xl font-semibold mb-4 text-gray-900">Join Us at Era Studio</h2>
-              <p className="text-gray-700 mb-6">
+              <h2 className={`${spectral.className} text-3xl font-semibold mb-4 text-gray-900`}>Join Us at Era Studio</h2>
+              <p className={`${instrumentSans.className} text-gray-700 mb-6`}>
                 Located just south of the Arts District in Downtown Los Angeles.
               </p>
               <div>
-                <h3 className="font-bold mb-2 text-gray-900">Address</h3>
-                <p className="text-gray-700">
+                <h3 className={`${spectral.className} font-bold mb-2 text-gray-900`}>Address</h3>
+                <p className={`${instrumentSans.className} text-gray-700`}>
                   1919 Bay St<br />
                   Los Angeles, CA 90021
                 </p>
               </div>
               <div className="mt-6">
-                <h3 className="font-bold mb-2 text-gray-900">Timing</h3>
-                <p className="text-gray-700">
+                <h3 className={`${spectral.className} font-bold mb-2 text-gray-900`}>Timing</h3>
+                <p className={`${instrumentSans.className} text-gray-700`}>
                   The celebration will take place on November 1st from 6:00 PM to 11:00 PM.
                 </p>
               </div>
@@ -58,7 +70,7 @@ export default function Details() {
           {/* Section 2: Parking (Image left, Text right) */}
           <div className="flex flex-col md:flex-row-reverse items-center gap-12">
             <div className="flex-1 md:text-left text-center">
-              <h2 className="text-3xl font-semibold mb-4 text-gray-900">Parking</h2>
+              <h2 className={`${spectral.className} text-3xl font-semibold mb-4 text-gray-900`}>Parking</h2>
               <p className="text-gray-700 mb-4">
                 If you're driving to the wedding, there's plenty of street parking on Bay street and other streets around the venue. 
                 You might notice some signs along Bay street in front of the warehouses that say "Parking only for [business name] customers"—don't worry, 
@@ -85,13 +97,13 @@ export default function Details() {
           {/* Section 3: Dinner (Text left, Image right) */}
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 md:text-left text-center">
-              <h2 className="text-3xl font-semibold mb-4 text-gray-900">Dinner by Kogi</h2>
+              <h2 className={`${spectral.className} text-3xl font-semibold mb-4 text-gray-900`}>Dinner by Kogi</h2>
               <p className="text-gray-700 mb-6">
                 We're excited to have the famous Kogi food truck serving their 
                 delicious Korean-Mexican fusion tacos at our reception.
               </p>
               <div>
-                <h3 className="font-medium mb-2 text-gray-900">Menu Highlights</h3>
+                <h3 className={`${spectral.className} font-medium mb-2 text-gray-900`}>Menu Highlights</h3>
                 <ul className="text-gray-700 list-inside">
                   <li>Short Rib</li>
                   <li>Spicy Pork, Chicken</li>
@@ -113,7 +125,7 @@ export default function Details() {
           {/* Section 4: Places to Stay (Text left, Image right) */}
           <div className="flex flex-col md:flex-row-reverse items-center gap-12">
             <div className="flex-1 md:text-left text-center">
-              <h2 className="text-3xl font-semibold mb-4 text-gray-900">Places to Stay</h2>
+              <h2 className={`${spectral.className} text-3xl font-semibold mb-4 text-gray-900`}>Places to Stay</h2>
               <p className="text-gray-700 mb-4">
                 We recommend staying in the area of <span className="font-medium text-gray-900">Old Town Pasadena</span> for the best experience—it's lively, walkable, and full of great restaurants, shops, and hotels.
               </p>
@@ -203,7 +215,7 @@ export default function Details() {
             </p>
             <a 
               href="/faqs" 
-              className="inline-block px-8 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition-colors"
+              className="inline-block px-8 py-3 bg-yellow-300 border border-black text-black rounded-md hover:bg-yellow-200 transition-colors"
             >
               View FAQs
             </a>
