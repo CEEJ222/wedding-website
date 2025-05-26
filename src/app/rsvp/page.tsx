@@ -53,6 +53,13 @@ export default function RSVP() {
         setSuccess(true);
         form.reset();
         setHasPlusOne(false);
+        
+        // Scroll to top to show success message
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        
         setTimeout(() => setSuccess(false), 5000); // Hide after 5 seconds
       } else {
         // Error response from server
