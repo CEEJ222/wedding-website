@@ -221,18 +221,20 @@ export default function Details() {
               />
             </div>
           </div>
-          {/* FAQ CTA Section */}
-          <div className="max-w-2xl mx-auto px-4 py-8 text-center">
-            <p className="text-gray-700 mb-6">
-              Have more questions? Check out our frequently asked questions for additional information.
+          {/* RSVP CTA Section */}
+          <div className="max-w-2xl mx-auto px-4 py-12 text-center">
+            <h2 className={`${spectral.className} text-3xl font-semibold mb-4 text-gray-900`}>Ready to Celebrate?</h2>
+            <p className={`${instrumentSans.className} text-gray-700 mb-8`}>
+              We can't wait to party with you! Please let us know if you'll be joining us for our special day.
             </p>
             <a 
-              href="/faqs" 
-              className="inline-block px-8 py-3 bg-yellow-300 border border-black text-black rounded-md hover:bg-yellow-200 transition-colors"
+              href="/rsvp" 
+              className={`${spectral.className} inline-block px-8 py-3 bg-yellow-200 border border-black text-black text-lg font-medium rounded-md hover:bg-yellow-300 transition-colors`}
             >
-              View FAQs
+              RSVP Now
             </a>
           </div>
+          {/* FAQ CTA Section */}
         </div>
       </div>
     </div>

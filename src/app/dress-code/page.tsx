@@ -116,7 +116,7 @@ export default function DressCode() {
             </p>
             <a 
               href="/faqs" 
-              className="inline-block px-8 py-3 bg-yellow-300 border border-black text-black rounded-md hover:bg-yellow-200 transition-colors"
+              className="inline-block px-8 py-3 bg-yellow-200 border border-black text-black rounded-md hover:bg-yellow-300 transition-colors"
             >
               View FAQs
             </a>
