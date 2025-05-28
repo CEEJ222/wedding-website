@@ -229,7 +229,7 @@ export default function Details() {
             </p>
             <a 
               href="/rsvp" 
-              className={`${spectral.className} inline-block px-8 py-3 bg-yellow-200 border border-black text-black text-lg font-medium rounded-md hover:bg-yellow-300 transition-colors`}
+              className={`${spectral.className} inline-block px-8 py-3 bg-yellow-300 border border-black text-black text-lg font-medium rounded-md hover:bg-yellow-200 transition-colors`}
             >
               RSVP Now
             </a>
